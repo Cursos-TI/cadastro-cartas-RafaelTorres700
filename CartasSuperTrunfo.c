@@ -6,10 +6,25 @@
 
 int main() {
   // Área para definição das variáveis para armazenar as propriedades das cidades
+  char nomeCidade[50];
+  int populacao;
+  float area;
 
   // Área para entrada de dados
+  printf("Digite o nome da cidade: ");
+  scanf("%s", nomeCidade);
+  printf("Digite a população da cidade: ");
+  scanf("%d", &populacao);
+  printf("Digite a área da cidade (em km²): ");
+  scanf("%f", &area);
 
   // Área para exibição dos dados da cidade
+  printf("\nInformações da cidade:\n");
+  printf("Nome: %s\n", nomeCidade);
+  printf("População: %d\n", populacao);
+  printf("Área: %.2f km²\n", area);
 
-return 0;
-} 
+  return 0;
+}
+
+
