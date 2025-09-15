@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das cartas
@@ -12,9 +13,12 @@ int main() {
 
   // Área para entrada de dados
   printf("Digite o nome da cidade: ");
-  scanf("%s", nomeCidade);
+  fgets(nomeCidade, sizeof(nomeCidade), stdin);
+  nomeCidade[strcspn(nomeCidade, "\n")] = '\0'; // Remove o caractere de nova linha
+
   printf("Digite a população da cidade: ");
   scanf("%d", &populacao);
+
   printf("Digite a área da cidade (em km²): ");
   scanf("%f", &area);
 
